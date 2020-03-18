@@ -1,0 +1,11 @@
+C:\Users\Cliff\source\repos\Bullet_Hell\Bullet_Hell\bin\Debug\netcoreapp3.1\Bullet_Hell.exe
+C:\Users\Cliff\source\repos\Bullet_Hell\Bullet_Hell\bin\Debug\netcoreapp3.1\Bullet_Hell.deps.json
+C:\Users\Cliff\source\repos\Bullet_Hell\Bullet_Hell\bin\Debug\netcoreapp3.1\Bullet_Hell.runtimeconfig.json
+C:\Users\Cliff\source\repos\Bullet_Hell\Bullet_Hell\bin\Debug\netcoreapp3.1\Bullet_Hell.runtimeconfig.dev.json
+C:\Users\Cliff\source\repos\Bullet_Hell\Bullet_Hell\bin\Debug\netcoreapp3.1\Bullet_Hell.dll
+C:\Users\Cliff\source\repos\Bullet_Hell\Bullet_Hell\bin\Debug\netcoreapp3.1\Bullet_Hell.pdb
+C:\Users\Cliff\source\repos\Bullet_Hell\Bullet_Hell\obj\Debug\netcoreapp3.1\Bullet_Hell.csprojAssemblyReference.cache
+C:\Users\Cliff\source\repos\Bullet_Hell\Bullet_Hell\obj\Debug\netcoreapp3.1\Bullet_Hell.AssemblyInfoInputs.cache
+C:\Users\Cliff\source\repos\Bullet_Hell\Bullet_Hell\obj\Debug\netcoreapp3.1\Bullet_Hell.AssemblyInfo.cs
+C:\Users\Cliff\source\repos\Bullet_Hell\Bullet_Hell\obj\Debug\netcoreapp3.1\Bullet_Hell.dll
+C:\Users\Cliff\source\repos\Bullet_Hell\Bullet_Hell\obj\Debug\netcoreapp3.1\Bullet_Hell.pdb
