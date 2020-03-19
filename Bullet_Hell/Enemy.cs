@@ -19,6 +19,5 @@ _/\_";
             enemy_position_y = pos_y;
             enemy = this.enemy;
         }
-
     }
 }
