@@ -17,14 +17,22 @@ namespace Bullet_Hell
 <|>
 _/\_");
 
-            Dovah.input();
+            Console.Write(Dovah);                                                                            // TESTS
 
-            int start_position_x = window_x - Carl.enemy_position_x;
-            Carl.enemy_position_x = start_position_x;
+            Dovah.input();                                                                                   // TESTS
 
-            //Console.SetCursorPosition((Console.WindowWidth - Carl.enemy.Length) / 2, Console.CursorTop + 1);
+            int start_position_x = window_x - Carl.enemy_position_x;                                         // TESTS
+            Carl.enemy_position_x = start_position_x;                                                        // TESTS
 
-            Console.WriteLine(Carl.enemy);
+            Console.SetCursorPosition((window_x - Carl.enemy.Length) / 2, Console.CursorTop + 1); // TESTS
+
+            // Write function that updates "SetCursorPosition" for more lines than just one.
+            // One Func that deals with SetCursorPosition for each Player, Enemy and Bullet
+
+            Console.Write(@" ___
+(._.)
+<|>
+_/\_");                                                                       // TESTS
 
 
             Console.ReadLine();
