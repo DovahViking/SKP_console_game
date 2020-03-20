@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading;
 
 namespace Bullet_Hell
 {
@@ -8,33 +9,24 @@ namespace Bullet_Hell
         {
             int window_x = 50;
             int window_y = 20;
-
             Console.SetWindowSize(window_x, window_y);
 
             Player Dovah = new Player(25, 0, 5, "|__uwu__|");
-            Enemy Carl = new Enemy(25, 0, @" ___
-(._.)
-<|>
-_/\_");
+            Enemy Carl = new Enemy(25, 0, "aaaa");
 
-            Console.Write(Dovah);                                                                            // TESTS
+            Thread enemy_movement = new Thread(Carl.movement); // Thread created cause movement uses thread.sleep()
+            enemy_movement.Start();
 
             Dovah.input();                                                                                   // TESTS
 
-            int start_position_x = window_x - Carl.enemy_position_x;                                         // TESTS
-            Carl.enemy_position_x = start_position_x;                                                        // TESTS
-
-            Console.SetCursorPosition((window_x - Carl.enemy.Length) / 2, Console.CursorTop + 1); // TESTS
+            //Console.SetCursorPosition((window_x - Carl.enemy.Length) / 2, Console.CursorTop + 1); // TESTS
 
             // Write function that updates "SetCursorPosition" for more lines than just one.
             // One Func that deals with SetCursorPosition for each Player, Enemy and Bullet
 
-            Console.Write(@" ___
-(._.)
-<|>
-_/\_");                                                                       // TESTS
+            Console.Write(Carl.enemy);                                                                       // TESTS
 
-
+            // aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
             Console.ReadLine();
         }
     }
