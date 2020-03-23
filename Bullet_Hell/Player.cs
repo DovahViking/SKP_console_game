@@ -7,7 +7,7 @@ namespace Bullet_Hell
     public class Player
     {
         public int player_position_x { get; set; } = 25;
-        public int player_position_y { get; set; } = -18;
+        public int player_position_y { get; set; } = 18;
         public int speed { get; set; } = 0;
         public string character { get; set; } = "|__uwu__|";
 
@@ -59,7 +59,7 @@ namespace Bullet_Hell
                     }
                     Console.Clear();
                     Console.SetCursorPosition((25 - character.Length) / 2 + player_position_y + player_position_x, Console.CursorTop = player_position_y);
-                    Console.WriteLine(character);
+                    //Console.WriteLine(character);
                 }
                 if (key_input.Key == ConsoleKey.LeftArrow || key_input.Key == ConsoleKey.A)
                 {
@@ -70,7 +70,7 @@ namespace Bullet_Hell
                     }
                     Console.Clear();
                     Console.SetCursorPosition((25 - character.Length) / 2 + player_position_x + player_position_y, Console.CursorTop + player_position_y);
-                    Console.WriteLine(character);
+                    //Console.WriteLine(character);
                 }
                 if (key_input.Key == ConsoleKey.DownArrow || key_input.Key == ConsoleKey.S)
                 {
@@ -81,7 +81,7 @@ namespace Bullet_Hell
                     }
                     Console.Clear();
                     Console.SetCursorPosition((25 - character.Length) / 2 + player_position_y + player_position_x, Console.CursorTop = player_position_y);
-                    Console.WriteLine(character);
+                    //Console.WriteLine(character);
                 }
                 if (key_input.Key == ConsoleKey.RightArrow || key_input.Key == ConsoleKey.D)
                 {
@@ -92,7 +92,7 @@ namespace Bullet_Hell
                     }
                     Console.Clear();
                     Console.SetCursorPosition((25 - character.Length) / 2 + player_position_x + player_position_y, Console.CursorTop + player_position_y);
-                    Console.WriteLine(character);
+                    //Console.WriteLine(character);
                 }
             }
         }
