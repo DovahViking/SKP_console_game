@@ -19,7 +19,7 @@ namespace Bullet_Hell
         }
 
         // position(x, y)
-        public KeyValuePair<int, int> position(int x, int y) // TEST
+        public KeyValuePair<int, int> position(int x, int y) // TEST // ----- Not in use yet, may never be -----
         {
             x = enemy_position_x;
             y = enemy_position_y;

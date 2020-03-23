@@ -15,19 +15,26 @@ namespace Bullet_Hell
             Enemy Carl = new Enemy(25, 0, "aaaa");
 
             Thread enemy_movement = new Thread(Carl.movement); // Thread created cause movement uses thread.sleep()
+            Thread Player_Enemy_movements = new Thread(movements); // To update and render enemy and player at the same time /---/ error saying movements() has parameters what the hell??
             enemy_movement.Start();
+            Player_Enemy_movements.Start();
 
             Dovah.input();                                                                                   // TESTS
 
-            //Console.SetCursorPosition((window_x - Carl.enemy.Length) / 2, Console.CursorTop + 1); // TESTS
-
-            // Write function that updates "SetCursorPosition" for more lines than just one.
-            // One Func that deals with SetCursorPosition for each Player, Enemy and Bullet
-
             Console.Write(Carl.enemy);                                                                       // TESTS
 
-            // aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
             Console.ReadLine();
+        }
+
+        public void movements()
+        {
+            // PLAN:
+
+            // Console.WriteLine(character);
+            // Console.WriteLine(enemy);
+            // Clear();
+
+            // So both character and enemy updates at the same time, and is rendered at the same time.
         }
     }
 }
