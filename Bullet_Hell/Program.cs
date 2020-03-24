@@ -24,17 +24,22 @@ namespace Bullet_Hell
             Console.ReadLine();
         }
 
-        public static void movements()
+        public static void movements() // /---/ Without the trigger and movements() movement would be fine, but would only show for the player and not the enemy
         {
             Player player = new Player(25, 0, 5, "|__uwu__|"); // TEST
+            Enemy Frank = new Enemy(25, 0, "aaaa"); // TEST
+            ConsoleKeyInfo cki;
 
             // PLAN:
             while (true)
             {
-                Console.WriteLine(player.character);
-                // + Console.WriteLine(enemy);
-                Thread.Sleep(1000);
-                Console.Clear();
+                cki = Console.ReadKey();
+                if (cki.Key == ConsoleKey.W || cki.Key == ConsoleKey.A || cki.Key == ConsoleKey.S || cki.Key == ConsoleKey.D || 
+                    cki.Key == ConsoleKey.UpArrow || cki.Key == ConsoleKey.LeftArrow || cki.Key == ConsoleKey.DownArrow || cki.Key == ConsoleKey.RightArrow)
+                {
+                    Console.WriteLine(player.character); // input every 2nd ReadKey()?.. /--/ starts at wrong position
+                    Console.WriteLine(Frank.enemy); // input every 2nd ReadKey()?.. /--/ follows player's y_axis?? /--/ completely stuck at player's x_axis??
+                }
             }
 
             // So both character and enemy updates at the same time, and is rendered at the same time

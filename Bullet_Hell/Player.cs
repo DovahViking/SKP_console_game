@@ -45,7 +45,6 @@ namespace Bullet_Hell
                         }
                         if (keyy_input.Key == ConsoleKey.N)
                         {
-                            Console.WriteLine("N");
                             break;
                         }
                     }
