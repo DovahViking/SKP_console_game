@@ -11,12 +11,12 @@ namespace Bullet_Hell
             int window_y = 20;
             Console.SetWindowSize(window_x, window_y);
 
-            Player Dovah = new Player(25, 0, 5, "|__uwu__|"); // TEST
-            Enemy Carl = new Enemy(25, 0, "aaaa"); // TEST
+            Player Dovah = new Player(25, 18, 5, "[Player]"); // TEST
+            Enemy Imperial_scum = new Enemy(25, 0, "[Enemy]"); // TEST
 
-            //Thread enemy_movement = new Thread(Carl.movement); // Thread created cause movement uses thread.sleep()
-            Thread Player_Enemy_movements = new Thread(movements); // To update and render enemy and player at the same time
-            //enemy_movement.Start();
+            Thread enemy_movement = new Thread(Imperial_scum.movement); // Thread created cause movement uses thread.sleep()
+            Thread Player_Enemy_movements = new Thread(()=>movements(Dovah, Imperial_scum)); // To update and render enemy and player at the same time
+            enemy_movement.Start();
             Player_Enemy_movements.Start();
 
             Dovah.input(); // Player movement
@@ -24,24 +24,20 @@ namespace Bullet_Hell
             Console.ReadLine();
         }
 
-        public static void movements() // /---/ Without the trigger and movements() movement would be fine, but would only show for the player and not the enemy
+        public static void movements(Player Dovah, Enemy Imperial_scum) // /---/ Without the trigger and movements() movement would be fine, but would only show for the player and not the enemy
         {
-            Player player = new Player(25, 0, 5, "|__uwu__|"); // TEST
-            Enemy Frank = new Enemy(25, 0, "aaaa"); // TEST
-            ConsoleKeyInfo cki;
 
-            // PLAN:
+            ConsoleKeyInfo cki;
             while (true)
             {
                 cki = Console.ReadKey();
                 if (cki.Key == ConsoleKey.W || cki.Key == ConsoleKey.A || cki.Key == ConsoleKey.S || cki.Key == ConsoleKey.D || 
                     cki.Key == ConsoleKey.UpArrow || cki.Key == ConsoleKey.LeftArrow || cki.Key == ConsoleKey.DownArrow || cki.Key == ConsoleKey.RightArrow)
                 {
-                    Console.WriteLine(player.character); // input every 2nd ReadKey()?.. /--/ starts at wrong position
-                    Console.WriteLine(Frank.enemy); // input every 2nd ReadKey()?.. /--/ follows player's y_axis?? /--/ completely stuck at player's x_axis??
+                    Console.WriteLine(Dovah.character); // input every 2nd ReadKey()?.. 
+                    Console.WriteLine(Imperial_scum.enemy); // input every 2nd ReadKey()?.. /--/ follows player's y_axis?? /--/ completely stuck at player's x_axis??
                 }
             }
-
             // So both character and enemy updates at the same time, and is rendered at the same time
         }
     }
