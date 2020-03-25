@@ -8,7 +8,7 @@ namespace Bullet_Hell
     public class Enemy
     {
         public int enemy_position_x = 25;
-        public int enemy_position_y = 15;
+        public int enemy_position_y = 3;
         public string enemy = "Imperial_scum";
 
         public Enemy(int pos_x, int pos_y, string enemy)
@@ -19,25 +19,29 @@ namespace Bullet_Hell
         }
 
         // position(x, y)
-        public KeyValuePair<int, int> position(int x, int y) // TEST // ----- Not in use yet, may never be -----
-        {
-            x = enemy_position_x;
-            y = enemy_position_y;
+        //public KeyValuePair<int, int> position(int x, int y) // TEST // ----- Not in use yet, may never be -----
+        //{
+        //    x = enemy_position_x;
+        //    y = enemy_position_y;
 
-            return new KeyValuePair<int, int>(x, y);
-        }
+        //    return new KeyValuePair<int, int>(x, y);
+        //}
 
         public void movement() // TEST
         {
-            Console.SetCursorPosition((25 - enemy.Length) / 2 + enemy_position_x, Console.CursorTop = enemy_position_y); // Sets the position for the console writer (int left, int top)
-            Thread.Sleep(3000);
-            enemy_position_x += 5;
-            Console.SetCursorPosition((25 - enemy.Length) / 2 + enemy_position_x, Console.CursorTop = enemy_position_y);
-            enemy_position_y += 2;
-            Console.SetCursorPosition((25 - enemy.Length) / 2 + enemy_position_y, Console.CursorTop = enemy_position_y);
-            Thread.Sleep(2000);
-            enemy_position_x -= 8;
-            Console.SetCursorPosition((25 - enemy.Length) / 2 + enemy_position_x, Console.CursorTop = enemy_position_y);
+            while (true)
+            {
+                Console.SetCursorPosition((25 - enemy.Length) / 2 + enemy_position_x, Console.CursorTop = enemy_position_y); // Sets the position for the console writer (int left, int top)
+                Thread.Sleep(3000);
+                enemy_position_x += 5;
+                Console.SetCursorPosition((25 - enemy.Length) / 2 + enemy_position_x, Console.CursorTop = enemy_position_y);
+                enemy_position_y += 2;
+                Console.SetCursorPosition((25 - enemy.Length) / 2 + enemy_position_y, Console.CursorTop = enemy_position_y);
+                Thread.Sleep(2000);
+                enemy_position_x -= 8;
+                Console.SetCursorPosition((25 - enemy.Length) / 2 + enemy_position_x, Console.CursorTop = enemy_position_y);
+                Thread.Sleep(1000);
+            }
         }
     }
 }
