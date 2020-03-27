@@ -33,6 +33,13 @@ namespace Bullet_Hell
             {
                 Console.SetCursorPosition((25 - enemy.Length) / 2 + enemy_position_x, Console.CursorTop = enemy_position_y); // Sets the position for the console writer (int left, int top)
                 Thread.Sleep(3000);
+                Bullet shot = new Bullet(1 , 1 , 1, "*");
+                shot.position_x = enemy_position_x;
+                shot.position_y = enemy_position_y - 1;
+                Console.WriteLine(shot.bullet);
+                Thread.Sleep(1000);
+                shot.position_y -= 3;
+                Console.WriteLine(shot.bullet);
                 enemy_position_x += 5;
                 Console.SetCursorPosition((25 - enemy.Length) / 2 + enemy_position_x, Console.CursorTop = enemy_position_y);
                 enemy_position_y += 2;
